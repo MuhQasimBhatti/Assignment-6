@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+void AVG(float i, float j)
+{
+	float avg = i / j;
+	cout << avg;
+}
+
+void main()
+{
+	int a, b;
+	cout << "\t\tQuestion 5" << endl;
+	cout << "Enter the scores" << endl;
+	cin >> a;
+	cout << "Enter the no. of balls" << endl;
+	cin >> b;
+	AVG(a, b);
+}
