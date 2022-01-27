@@ -1,0 +1,25 @@
+#include<iostream>
+using namespace std;
+
+int fnc(int a,int b)
+{
+	float c = a;
+	for (int i = 0; i < b; i++)
+		c = c * a;
+	
+	return c;
+
+}
+int main() {
+
+	cout << "\t\tQuestion 3" << endl;
+	float a;
+	int b;
+	cout << "Enter the point number" << endl;
+	cin >> a;
+	cout << "Enter the number of times to multiply" << endl;
+	cin >> b;
+	
+	fnc(a, b);
+	cout<<fnc(a, b);
+}
