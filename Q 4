@@ -1,0 +1,25 @@
+#include<iostream>
+using namespace std;
+
+int func(int a)
+{
+	int v;
+	if (a >= 4000)
+		v=a * 0.03;
+	else if (a >= 3000)
+		v = a * 0.04;
+	else if (a >= 2000)
+		v = a * 0.05;
+	else if (a <= 1000)
+		v = 0;
+	return v;
+}
+
+int main()
+{
+	int a;
+	cout << "\t\tQuestion 4" << endl;
+	cout << "Enter your salary" << endl;
+	cin >> a;
+	cout<<"Tax is "<<func(a);
+}
