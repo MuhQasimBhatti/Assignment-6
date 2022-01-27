@@ -1,0 +1,23 @@
+
+#include <iostream>
+using namespace std;
+
+void fnc(int a, int b)
+{
+    int c = a;
+    for (int i = 1; i < b; i++)
+        a = c * a;
+    cout << a << endl;
+}
+
+int main()
+{
+    cout << "\t\tQuestion 2" << endl;
+    int a;
+    int b;
+    cout << "Enter the number" << endl;
+    cin >> a;
+    cout << "Enter the power" << endl;
+    cin >> b;
+    fnc(a, b);
+}
