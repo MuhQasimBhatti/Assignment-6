@@ -1,0 +1,29 @@
+#include<iostream>
+using namespace std;
+#include<iomanip>
+
+struct tax
+{
+	int salary;
+	float trate;
+	float tax;
+};
+
+int main()
+{
+	tax r[5];
+	cout << "\t\tQuestion no 9" << endl;
+	for (int i = 0; i < 5; i++)
+	{
+		cout << "Enter Person " << i+1 << " salary" << endl;
+		cin >> r[i].salary;
+		cout << "Enter Person " << i+1 << " tax rate" << endl;
+		cin >> r[i].trate;
+		r[i].tax = r[i].salary * (r[i].salary / 100);
+	}
+	cout << setw(10) << "Salary" << setw(10) << "Tax rate" << setw(10) << "Tax" << endl;
+	for (int i = 0; i < 5; i++)
+	{
+		cout << setw(10) << r[i].salary << setw(10) << r[i].trate << setw(10) << r[i].tax << endl;
+	}
+}
