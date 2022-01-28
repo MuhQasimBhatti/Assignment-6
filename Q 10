@@ -1,0 +1,49 @@
+
+
+#include <iostream>
+using namespace std;
+#include<iomanip>
+#include<string>
+
+struct Book
+{
+	int BookID;
+	char name[200];
+	int price;
+
+};
+
+struct Order
+{
+	int OrderID;
+	Book book[5];
+};
+
+int main()
+{
+	//Order B;
+	Order A;
+	cout<<"Enter Order ID"<<endl;
+	cin >> A.OrderID;
+		for (int i = 0; i < 5; i++)
+		{
+			cout << "Enter Book ID" << endl;
+			cin	>> A.book[i].BookID;
+			
+			cin.ignore();
+		
+			cout << "Enter Book Name" << endl;
+			cin.getline(A.book[i].name,200);
+			
+			cout << "Enter Book price" << endl;
+			cin >> A.book[i].BookID;
+		
+		}
+
+		cout << setw(10) << "Orderid" << A.OrderID << endl;
+		cout << setw(20) << "Book ID" << setw(20) << "Book Name" << setw(20) << "Book Price" << endl;
+		for (int i = 0; i < 5; i++)
+		{
+			cout << setw(20) << A.book[i].BookID << setw(20) << A.book[i].name << setw(20) << A.book[i].price << endl;
+		}
+}
