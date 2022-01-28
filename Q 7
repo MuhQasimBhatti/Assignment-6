@@ -1,0 +1,34 @@
+#include<iostream>
+using namespace std;
+
+struct city
+{
+	char name[200];
+	int pop;
+};
+
+void func(char* name, int pop)
+{
+	cout << "-----------------------------------------------------------" << endl;
+	cout << name <<" has "<< pop <<" people " << endl;
+}
+
+int main()
+{
+	cout << "\t\tQuestion no 7" << endl;
+	city Data[2];
+	
+	for (int i = 0; i < 2; i++)
+	{
+		cout << "Enter name of the city" << endl;
+		cin.getline(Data[i].name,200);
+		cout << "Enter population of the city" << endl;
+		cin >> Data[i].pop;
+		cin.ignore();
+	}
+	if (Data[0].pop < Data[1].pop)
+		func(Data[0].name, Data[0].pop);
+	else
+		func(Data[1].name, Data[1].pop);
+}
+
